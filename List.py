@@ -1,16 +1,9 @@
-n, m = map(int, input().split())
-a = []
-for i in range(n):
-    a.append(list(map(str, input())))
-input()
-b = []
-for i in range(n):
-    b.append(list(map(str, input())))
+n, x = map(int, input().split())
 
 count = 0
-for i in range(n):
-    for j in range(m):
-        if a[i][j] == b[i][j]:
+for i in range(1, n+1):
+    for j in range(1, n+1):
+        if i * j == x:
             count += 1
 
 print(count)
